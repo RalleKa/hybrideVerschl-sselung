@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hybride Verschlüsselung</title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        .responsive {
+            padding: 0 6px;
+            float: left;
+            width: 15vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <!--    Einleitung  -->
+        <div class="card">
+            <h1>Hybride Verschlüsselung</h1>
+            <p><br></p>
+            <p>Die hybride Verschlüsselung ist eine Kombination aus der symmetrischen und asymmetrischen
+                Verschlüsselung. Bei
+                diesem Verfahren werden die Vor- und Nachteile der symmetrischen bzw. asymmetrischen
+                Verschlüsselung
+                ausgeglichen.
+                Für nähere Details zur symmetrischen und asymmetrischen Verschlüsselung wird auf die jeweiligen
+                Wiki-Einträge
+                verwiesen.
+            </p>
+        </div>
+        <p><br></p>
+
+        <!--    Inhaltsverzeichnis  -->
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card">
+                    <h2>Inhaltsverzeichnis</h2>
+                    <ul>
+                        <li>
+                            <a href="#alternativeVerschluesselung">1Vor und Nachteile alternativer
+                                Verschlüsselungsalgorithmen</a>
+                        </li>
+                        <li>
+                            <a href="#symmetrischeVerschluesselung">1.1 Symmetrische Verschlüsselung</a>
+                        </li>
+                        <li>
+                            <a href="#asymmetrischeVerschluesselung">1.2 Asymmetrische Verschlüsselung</a>
+                        </li>
+                        <li>
+                            <a href="#hybrideVerschluesselung">2 hybrideVerschluesselung</a>
+                        </li>
+                        <li>
+                            <a href="#anwendungsbeispiele">3 anwendungsbeispiele</a>
+                        </li>
+
+                        <li>
+                            <a href="#quellen">4 quellen</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p><br></p>
+
+        <!--    Vor und Nachteile alternativer Verschlüsselungsalgorithmen   -->
+        <div class="card">
+            <h2>
+                <span id="alternativeVerschluesselung" class="mw-headline">Vor und Nachteile alternativer
+                    Verschlüsselungsalgorithmen</span>
+            </h2>
+            <p><br></p>
+            <h3>
+                <span id="symmetrischeVerschluesselung" class="mw-headline">Symmetrische Verschlüsselung</span>
+            </h3>
+            <p>
+                Die symmetrische Verschlüsselung hat den Vorteil, dass sie wesentlich weniger Rechenzeit als die
+                asymmetrische Verschlüsselung benötigt. Jedoch wird für die Ver- und Entschlüsselung derselbe
+                Schlüssel verwendet. Insbesondere wenn der Schlüssel nicht persönlich überbracht werden kann, birgt
+                die Schlüsselübertragung daher hohe Risiken. Denn wenn der Schlüssel in die Hände Dritter gelangt,
+                können diese auch die geheime Nachricht entschlüsseln.
+                Um optimale Sicherheit zu erreichen, wird zudem pro Sender-Empfänger-Paar ein eigener Schlüssel
+                benötigt. Je mehr Paare es gibt, desto höher wird auch die Zahl der benötigten Schlüssel.
+            </p>
+            <p><br></p>
+            <h3>
+                <span id="asymmetrischeVerschluesselung" class="mw-headline">Asymmetrische Verschlüsselung</span>
+            </h3>
+            <p>
+                Bezüglich der verwendeten Schlüssel ist die asymmetrische Verschlüsselung deutlich sicherer. Dies
+                resultiert aus der Kombination von privaten und öffentlichen Schlüsseln. Einem Empfänger ist immer
+                ein solches Paar zugeordnet. Der öffentliche Schlüssel ist frei zugänglich und kann von einem Sender
+                zur Verschlüsselung verwendet werden. Eine Entschlüsselung ist mit einem öffentlichen Schlüssel
+                nicht möglich. Zur Entschlüsselung ist der private Schlüssel des Empfängers notwendig, der nur
+                diesem bekannt ist. Die asymmetrische Verschlüsselung ist somit nicht auf eine Schlüsselübertragung
+                angewiesen.
+                Zudem werden durch das Prinzip der öffentlichen und privaten Schlüssel nur jeweils ein Paar pro
+                Nachrichtenempfänger benötigt. Es werden bei vielen Teilnehmern somit weniger Schlüssel als bei
+                Verwendung der symmetrischen Verschlüsselung benötigt.
+                Allerdings hat die asymmetrische Verschlüsselung den Nachteil, dass die benötigte Rechenkapazität
+                gegenüber der symmetrischen Verschlüsselung wesentlich höher ist.
+            </p>
+        </div>
+        <p><br></p>
+
+        <div class="card">
+            <h2>
+                <span id="hybrideVerschluesselung" class="mw-headline">Erläuterung der hybriden
+                    Verschlüsselung</span>
+            </h2>
+
+            <div class="row">
+                <div class="col-sm-8">
+                    <p>
+                        Wie bei der Asymmetrischen Verschlüsselung gibt es bei der hybriden Verschlüsselung verschiedene
+                        Keys.
+                        Der private Key befindet sich im Besitz des Empfängers. Mit ihm können Nachrichten entschlüsselt
+                        werden,
+                        die mit einem public Key codiert worden sind. Der public Key befindet sich im Besitz des
+                        Senders. Die
+                        besonderheit des public Key ist, dass damit zwar eine Nachricht verschlüsselt, aber nicht wieder
+                        entschlüsselt werden kann. Zum entschlüsseln wird der private Key benötigt. (<a
+                            href="0.png">Abb. Ausgangssitution</a>)
+                    </p>
+
+                    <p>
+                        Darüber hinaus wird bei der hybriden Verschlüsselung vom Sender ein zufälliger Sitzungsschlüssel
+                        generiert. Dieser kann mit hilfe des öffentlichen Schlüssels asymmetrisch codiert und somit
+                        sicher
+                        übertragen werden. (<a href="1.png">Abb. 1</a>, <a href="2.png">Abb. 2</a>, <a href="3.png">Abb.
+                            3</a>)
+                    </p>
+
+                    <p>
+                        Der Empfänger kann den Sitzungsschlüssel mit hilfe des private Key wieder entschlüsseln. Nun
+                        besitzen
+                        Sender und Empfänger denselben Sitzungsschlüssel. Die Vorteile der asymmetrischen
+                        Verschlüsselung
+                        konnten ausgenutzt werden.
+                    </p>
+
+                    <p>
+                        Im weiteren verschlüsselt der Sender die eigentlichen Daten symmetrisch. Insbesondere bei
+                        Nachrichten,
+                        deren Größe erheblich über der Größe vom Sitzungsschlüssel liegt, kann so viel Rechenarbeit
+                        eingespart
+                        werden. (<a href="4.png">Abb. 4</a>)
+                    </p>
+
+                    <p>
+                        Die Nachricht kann sicher an den Empfänger übermittelt und dort mithilfe des Sitzungsschlüssels
+                        wieder
+                        decodiert werden. (<a href="5.png">Abb. 5</a>)
+                    </p>
+
+                    <p>
+                        Die hybride Verschlüsselung kombiniert somit die Vorteile der asymmetrische und der symmetrische
+                        Verschlüsselung.
+                    </p>
+                </div>
+                <div class="col-sm-2">
+                    <a target="_blank" href="0.png">
+                        <img src="0.png" class="responsive">
+                    </a>
+
+                    <a target="_blank" href="1.png">
+                        <img src="1.png" class="responsive">
+                    </a>
+
+                    <a target="_blank" href="2.png">
+                        <img src="2.png" class="responsive">
+                    </a>
+
+                    <a target="_blank" href="3.png">
+                        <img src="3.png" class="responsive">
+                    </a>
+
+                    <a target="_blank" href="4.png">
+                        <img src="4.png" class="responsive">
+                    </a>
+
+                    <a target="_blank" href="5.png">
+                        <img src="5.png" class="responsive">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>
+                <span id="anwendungsbeispiele" class="mw-headline">Erläuterung der hybriden
+                    Anwendungsbeispiele</span>
+            </h2>
+            <ul>
+                SSL/TLS
+                <li>
+                    wird zur Authentifizierung und Verschlüsselung von Internetverbindungen verwendet
+                    erweitert andere Protokolle ohne eigene Verschlüsselung (z. B. HTTP → HTTPS, POP → POPS für E-Mails)
+                </li>
+
+                PGP - Pretty Good Privacy (OpenPGP)
+                <li>
+                    ist ein Verschlüsselungsstandard für E-Mails
+                    ist nur wenig verbreitet
+                </li>
+
+                SSH - Secure Shell
+                <li>
+                    kryptographisches Protokoll, das den Zugriff auf entfernte Rechner über ein unsicheres Netzwerk
+                    ermöglicht
+                </li>
+            </ul>
+
+            <div class="card">
+                <h2>
+                    <span id="quellen" class="mw-headline">Quellen</span>
+                </h2>
+                <ul>
+                    <li>
+                        https://www.philipphauer.de/info/info/asymmetrische-verschluesselung/
+                    </li>
+    
+                    <li>
+                        https://www.elektronik-kompendium.de/sites/net/1910141.htm
+                    </li>
+    
+                    <li>
+                        https://www.elektronik-kompendium.de/sites/net/0902281.htm
+                    </li>
+
+                    <li>
+                        https://www.elektronik-kompendium.de/sites/net/1810181.htm
+                    </li>
+
+                    <li>
+                        https://www.elektronik-kompendium.de/sites/net/0906061.htm
+                    </li>
+                </ul>
+        </div>
+    </div>
+</body>
+
+</html>
