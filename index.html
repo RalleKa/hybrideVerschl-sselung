@@ -14,15 +14,46 @@
 
     <style>
         .responsive {
-            padding: 0 6px;
-            float: left;
-            width: 15vw;
-            max-width: 300px;
+            margin-top: 3px;
+            float: right;
+            width: 30vw;
         }
 
-        .card {
-            padding: 5px;
-            margin-top: 20px;
+        @media (min-width: 1000px) {
+            .responsive {
+                float: left;
+                width: 10vw;
+                margin-top: 3px;
+                margin:3px;
+            }
+
+            #mainContainer {
+                max-width: 80vw;
+                margin: auto;
+            }
+        }
+
+        @media (min-width: 2000px) {
+            .responsive {
+                float: left;
+                width: 8vw;
+                margin-top: 3px;
+                margin:3px;
+            }
+        }
+
+        @media (min-width: 4000px) {
+            .responsive {
+                float: left;
+                width: 4vw;
+                margin-top: 3px;
+                margin:3px;
+            }
+        }
+
+        .card{
+            margin-top: 30px;
+            margin : 10px;
         }
 
         #inhaltSym,
@@ -30,22 +61,22 @@
             margin-left: 10px;
         }
 
-        h1{
+        h1 {
             padding-bottom: 20px;
         }
 
-        h2{
+        h2 {
             padding-bottom: 10px;
         }
 
-        h3{
+        h3 {
             padding-bottom: 5px;
         }
     </style>
 </head>
 
 <body>
-    <div class="card" style="max-width:1000px;margin: auto;">
+    <div class="card" id="mainContainer">
         <!--    Einleitung  -->
         <div class="card">
             <h1>Hybride Verschlüsselung</h1>
@@ -185,7 +216,7 @@
                         Verschlüsselung.
                     </p>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-4">
                     <a target="_blank" href="0.PNG">
                         <img src="0.PNG" class="responsive">
                     </a>
